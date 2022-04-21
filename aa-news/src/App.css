@@ -22,11 +22,16 @@ body{
   padding: 20px;
   background-color: #8c8db5;
   height: 60px;
+  
+}
+.link {
+  margin-left: 5px;
   color: #fff;
   font-size: 18px;
-  font-weight: bold;
+  font-weight: 300;
+  text-decoration: none;
+  cursor: pointer;
 }
-
 .list-cards{
   display: flex;
   flex-direction: column;
