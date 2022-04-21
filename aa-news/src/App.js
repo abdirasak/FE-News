@@ -4,10 +4,7 @@ import './App.css';
 import { ArticleList } from './components/ArticleList';
 import { Header } from './components/Header';
 import { Navbar } from './components/Navbar';
-import { Home } from './routes/Home';
-import { Coding } from './routes/Coding';
-import { Cooking } from './routes/Cooking';
-import { Football } from './routes/Football';
+
 
 
 function App() {
@@ -16,10 +13,7 @@ function App() {
       <Header/>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/coding" element={<Coding />} />
-        <Route path="/cooking" element={<Cooking />} />
-        <Route path="/football" element={<Football />} />
+        <Route path="/articles/:topic" element={ <ArticleList />}/>
       </Routes>
     </div>
   );
