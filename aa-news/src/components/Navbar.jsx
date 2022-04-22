@@ -1,26 +1,33 @@
 import React from 'react'
 import {Link} from 'react-router-dom';
 import {useEffect, useState} from 'react'
+import { getTopics } from '../utils/api';
+
 export const Navbar = () => {
   const [topics, settopics] = useState([])
 
     useEffect(() => {
-    fetch('https://aa-news-api.herokuapp.com/api/topics')
-    .then((res) => res.json())
-    .then((data) => {
-        settopics(data.topics)
+    getTopics().then((topicList) => {
+      settopics(topicList)
     })
-    }, [topics])
+    }, [])
 
         function capitalize(s){
         return s[0].toUpperCase() + s.slice(1);
     }
+  
 
   return (
     <div className='nav-bar'> 
+      <ul>
         {topics.map((topic) => {
-          return <Link className="link" to={`/articles/${topic.slug}`} >{capitalize(topic.slug)}</Link>
-        })}
+              return (<li className="link" key={topic.slug}>
+                <Link to={`/topics/${topic.slug}`} >{capitalize(topic.slug)}</Link>
+              </li>
+            )
+            })}
+      </ul>
+        
 
     </div>
   )

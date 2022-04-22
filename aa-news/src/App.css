@@ -25,18 +25,26 @@ body{
   
 }
 .link {
+  list-style: none;
+  text-decoration: none;
+  display: inline;
   margin-left: 5px;
-  color: #fff;
   font-size: 18px;
   font-weight: 300;
   text-decoration: none;
   cursor: pointer;
+ 
+  color: #fff;
+
 }
 .list-cards{
   display: flex;
   flex-direction: column;
   align-items: center;
+  
 }
+
+
 .card{
   background-color: #fff;
   width: 75%;
@@ -55,4 +63,32 @@ h1{
 p{
   line-height: 1.5rem;
   letter-spacing: 1px;
+  margin-bottom: 18px;
 }
+
+.read-more{
+  text-decoration: none;
+  background-color: #382c6a;
+  color: #fff;
+  border-radius: 7px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+/* @media only screen and (max-width: 600px) {
+  .list-cards{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+  }
+  .card{
+    background-color: #fff;
+    width: 75%;
+    margin: 20px;
+    padding: 20px;
+    list-style: none;
+    border-radius: 15px;
+    box-shadow: 2.5px 5px 10px #888888;
+  }
+} */
