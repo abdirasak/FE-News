@@ -20,6 +20,7 @@ export const Navbar = () => {
   return (
     <div className='nav-bar'> 
       <ul>
+        <Link to={`/`} >Home</Link>
         {topics.map((topic) => {
               return (<li className="link" key={topic.slug}>
                 <Link to={`/topics/${topic.slug}`} >{capitalize(topic.slug)}</Link>
