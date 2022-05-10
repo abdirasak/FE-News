@@ -6,6 +6,7 @@
 body{
   background-color: #e0e3ea;
   font-family: Georgia, 'Times New Roman', Times, serif; 
+  
 }
 .header{
   width: 100%;
@@ -36,15 +37,17 @@ body{
   color: #fff;
 
 }
-.list-cards{
+.list-cards {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
   
 }
 
 
-.card{
+.list-cards li{
+  flex-basis: 30%;
   background-color: #fff;
   width: 75%;
   margin: 20px;
@@ -74,14 +77,53 @@ p{
   cursor: pointer;
 }
 
-/* @media only screen and (max-width: 600px) {
+.singlePage_container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main{
+  background-color: #f2f3f5;
+  margin-top: 25px;
+  width: 45%;
+  height: 600px;
+  box-shadow: 5px 10px 18px #888888;
+  border-radius: 15px;
+}
+.main h4{
+  text-align: center;
+  padding: 20px;
+  font-weight: bold;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+
+.main small{
+  padding: 10px;
+  font-size: 16px;
+  text-transform: capitalize;
+}
+
+.main small span{
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.main p{
+  padding: 15px;
+  font-size: 16px;
+}
+
+@media only screen and (max-width: 750px) {
   .list-cards{
     display: flex;
     flex-direction: column;
     align-items: center;
    
   }
-  .card{
+  .list-cards li{
     background-color: #fff;
     width: 75%;
     margin: 20px;
@@ -90,4 +132,4 @@ p{
     border-radius: 15px;
     box-shadow: 2.5px 5px 10px #888888;
   }
-} */
+}
